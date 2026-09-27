@@ -1,0 +1,13 @@
+money = input("Enter a symbol of either (£/$): ")
+amount = float(input("Enter the amount you want to convert to: "))
+pounds = 0.75
+dollars = 1.325
+
+if money == "£":
+    Conversion = round(amount * dollars, 2)
+    print(f"Your amount in dollars is: {Conversion}")
+elif money == "$":
+    Conversion = round(amount * pounds, 2)
+    print(f"Your amount in pounds is: {Conversion}")
+else:
+    print(f"{money} is not a valid currency")
