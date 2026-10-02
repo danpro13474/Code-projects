@@ -1,0 +1,103 @@
+# College regestration system 
+
+ 
+
+Id = input("Enter your student Id: ") 
+
+ 
+
+ 
+
+while Id == "": 
+
+    print("You have not typed in anything, please type in your Id") 
+
+    Id = input("Enter your student Id: ") 
+
+while len(Id) != 8: 
+
+    print("Your Id must have 8 digits only, please try again") 
+
+    Id = input("Enter your student Id: ") 
+
+if not Id.isdigit(): 
+
+    print("You cannot have any alphabetical letters in your Id, please try again.") 
+
+    Id = input("Enter your student Id: ") 
+
+ 
+
+firstName = input("Enter your first name: ") 
+
+ 
+
+while firstName == "": 
+
+    print("You have not typed in anything, please type in your first name") 
+
+    Id = input("Enter your first name: ") 
+
+while not firstName.isalpha(): 
+
+    print("You cannot have any numbers in your name, please try again.") 
+
+    firstName = input("Enter your first name: ") 
+
+ 
+
+lastName = input("Enter your last name: ") 
+
+ 
+
+while lastName == "": 
+
+    print("You have not typed in anything, please type in your last name") 
+
+    lastName = input("Enter your last name: ") 
+
+while not lastName.isalpha(): 
+
+    print("You cannot have any numbers in your last name, please try again.") 
+
+    lastName = input("Enter your last name: ") 
+
+ 
+
+email = input("Enter your email address: ") 
+
+ 
+
+while email == "": 
+
+    print("You have not typed in anything, please type in your email") 
+
+    email = input("Enter your email address: ") 
+
+while email.find("@") == -1: 
+
+    print("Your email must contain an @ symbol, please type in your email again") 
+
+    email = input("Enter your email address: ") 
+
+while email.find("gmail.com") == -1: 
+
+    print("Your email must be a valid domain, please try again") 
+
+    email = input("Enter a valid email address that includes the domain gmail.com: ") 
+
+ 
+
+print(f"Welcome {email}: ") 
+
+print("---------------") 
+
+print("---------------") 
+
+print(f" Student ID - {Id}") 
+
+print(f" Student first name - {firstName}") 
+
+print(f" Student last name - {lastName}") 
+
+ 
