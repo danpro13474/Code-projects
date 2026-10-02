@@ -1,13 +1,47 @@
-money = input("Enter a symbol of either (£/$): ")
-amount = float(input("Enter the amount you want to convert to: "))
-pounds = 0.75
-dollars = 1.325
+# Receipt generator
 
-if money == "£":
-    Conversion = round(amount * dollars, 2)
-    print(f"Your amount in dollars is: {Conversion}")
-elif money == "$":
-    Conversion = round(amount * pounds, 2)
-    print(f"Your amount in pounds is: {Conversion}")
-else:
-    print(f"{money} is not a valid currency")
+username = input("Enter your username: ")
+
+if len(username) > 8:
+    print("You cant have a username greater than 8 characters, please try again")
+elif not username.find(" ") == -1:
+    print("You cannot have any spaces between your name, please try again")
+elif not username.isalpha():
+    print("You cannot have any numbers or symbols in your name, please try again")
+
+foodType = input("Enter the type of food you want to buy: ")
+
+price = input("Enter the price of the food: ")
+
+extra = input("Would you like to buy anything else (Y/N): ")
+
+if extra != "Y":
+    print(f"Ok you will recieve your total amount for the {foodType}")
+
+extra_food = input("What would you like to buy: ")
+extra_price = input("What is the price of the item: ")
+
+print(username)
+print("--------------------")
+print("--------------------")
+print(f"The {foodType} is £{price}")
+print(f"The {extra_food} is £{extra_price}")
+
+
+price = float(price)
+extra_price = float(extra_price)
+
+total = round(price + extra_price,2)
+
+print(f"The total for the food is: £{total}")
+
+
+
+
+
+
+
+
+
+
+
