@@ -1,0 +1,84 @@
+# Interactive cinema seating and Ticket system
+
+while True:
+
+  name = input("Enter your full name (or type 'quit' to exit): ").strip()
+
+  if name.lower() == "quit" or name.lower() == "done":
+   print("GoodBye and Enjoy your day!")
+   break
+
+
+  while name == "":
+     print("You have not typed in your full name, please enter your full name")
+     name = input("Enter your full name: ")
+  while not name.replace(" ", "").isalpha():
+     print("Your name cannot contain any numbers or symbols, please try again")
+     name = input("Enter your full name: ")
+     
+     
+     
+  Cap = name.capitalize()
+  print(f"Hello {Cap}")
+     
+
+    
+
+
+  age = int(input("Enter your age: "))
+  print()
+  young = int(input("How many siblings in your family are going into the cinema: "))
+
+  print()
+
+  grown = int(input("How many adults are with you: "))
+
+  ticket = input("Select the type of ticket the adults want to buy (Standard or VIP): ")
+
+  young1 = input("Select the type of tickets you would like to buy for the siblings (Standard or VIP): ")
+
+  Standard = 45.36
+  Standard = float(Standard)
+
+  vip = 73.24
+  vip = float(vip)
+
+
+
+  if young1 == "Standard":
+    print("Your children will recieve a discount offer for the Standard tickets")
+    standtotal = Standard / young
+    print(f"Your total for the {young} child tickets are: £{standtotal} per child")
+  print()
+  if ticket == "Standard":
+    print("Since you are an adult You will to pay a full price for the Standard tickets")
+    standgrown = Standard * grown 
+    print(f"Your total for the standard tickts is: £{standgrown} per adult")
+  print()
+  if young1 == "VIP":
+    print("Your children will recieve a discount offer for the vip tickets")
+    viptotal = vip / young
+    print(f"Your total for the {young} child tickets are: £{viptotal} per child")
+  print()
+  if ticket == "VIP":
+    print("Since you are an adult you will have to pay a full price for the vip tickets")
+    viptotal = vip * grown
+    print(f"Your total for the vip tickets are: £{viptotal} per adult")
+  print()
+  print("Total price --------------------")
+  
+  total_sale = 0.0
+  total_price = 0.0
+
+  if ticket == "VIP":
+   viptotal2 = vip * grown + (vip / young)
+   print(f"Your total price for the cinema is: £{viptotal2}")
+
+  elif ticket == "Standard":
+   standardtotal = Standard * grown + (Standard / young)
+   standardtotal = float(standardtotal)
+   print(f"Your total price for the cinema is: £{standardtotal}")
+
+ 
+
+  
